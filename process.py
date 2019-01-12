@@ -24,10 +24,10 @@ def main():
     self_vector=vectors[words.index(request.values["word"])]
     temp=np.sum(((vectors-self_vector)**2),axis=1)
     sorted=np.argsort(temp)
-    out={}
+    out=[]
     for i in sorted[1:15]:
-        out[words[i]]=temp[i]
-    return str(out)
+        out.append(words[i],temp[i])
+    return jsonify(out)
 
 if __name__ == '__main__':
     # Start the web server!
