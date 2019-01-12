@@ -26,7 +26,7 @@ def main():
     sorted=np.argsort(temp)
     out=[]
     for i in sorted[1:15]:
-        out.append(words[i],temp[i])
+        out.append((words[i],temp[i]))
     return jsonify(out)
 
 if __name__ == '__main__':
