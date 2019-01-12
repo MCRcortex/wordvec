@@ -9,7 +9,7 @@ try:
     data=np.load("data.npz")
 except:
     f=open("data.npz",'wb')
-    f.write(requests.get("https://storage.googleapis.com/takeafile/AEnB2Ur8am-HA0q-qeXMeQbEgQqCFwlhzdMuicT74nxA9EaKZTxjioDmQ9Uw-P68tBDBWEjCYR5O1gf2DuEEv9LydPmNXK2U_QVyewpjNVPR_56qRK5g5BA.TM_7CrU1buayfDmN?GoogleAccessId=download@tyris-transfast.iam.gserviceaccount.com&Expires=1547252365&Signature=lVrI8KFlI52%2FbUaDu%2BJN55SIoLEeEn21ot3N2LwQ9ZY%2FkNLJkQMmTxIhHHcgapBj8Y8kXGJQ7WkXsRRcqW7vmZfldakh1h73QKEP8J8DhRlO68quvgFCT0AusejsXUXOxeAoGs%2FJrYhE%2FcTW6CYR0uEPLQB1TdGPBicExd2OSvVFFbNIhuAPmYboJESZW5ISIENB7syegQqhG2q0pBQsrk5kS%2Fti3%2FR4nZq5yGNsn1IvxTp7RR1ZrKtemcJT6gaGRu6y4YSd3SC9nZ0VlgVCrj%2BNYKiEboYRsFwT7LKl%2BIpy0cmVwEeS71O2QDAcwBHwc%2Bdr3IgKpE1oFAEIa3naRw%3D%3D&response-content-disposition=attachment;filename=%22data.npz%22", allow_redirects=True).content)
+    f.write(requests.get("http://search.iclr2018.smerity.com/static/ncss-data.npz", allow_redirects=True).content)
     f.close()
     data=np.load("data.npz")
 vectors=data["vectors"]
